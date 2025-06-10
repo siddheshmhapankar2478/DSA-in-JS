@@ -61,3 +61,31 @@ const countDigits = (n) => {
   return count;
 };
 console.log({ countDigits: countDigits(-259) });
+
+
+const palindrome = (word) => {
+  let start = 0,
+    end = word.length - 1;
+  while (start < end) {
+    if (word.charAt(start) === word.charAt(end)) {
+      start++;
+      end--;
+    } else return false;
+  }
+  return true;
+};
+console.log({ checkPalindrome: palindrome("nayan") });
+
+const reverseNumber = (num) => {
+  let reverse = 0;
+  if (num == 0) return num;
+  if (num < 0) num = -num;
+
+  while (num > 0) {
+    let lastDigit = num % 10;
+    reverse = reverse * 10 + lastDigit;
+    num = Math.floor(num / 10);
+  }
+  return reverse;
+};
+console.log({ reverseNumber: reverseNumber(1234) });
