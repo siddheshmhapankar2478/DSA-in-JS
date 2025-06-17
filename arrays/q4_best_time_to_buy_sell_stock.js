@@ -1,4 +1,4 @@
-var maxProfit = function (prices) {
+const maxProfit = function (prices) {
   let n = prices.length;
   let max = prices[prices.length - 1];
   let maxProfit = 0;
